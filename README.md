@@ -1,128 +1,114 @@
-🔍 **Project Overview**
+🧬 **NovaGen Research Labs – Machine Learning Project**
+📌 **Overview**
 
-NovaGen Research Labs conducts large-scale population health studies to understand how underlying health conditions influence disease risk and long-term outcomes. This project develops a predictive machine learning model to classify individuals as “healthy” or “unhealthy” using physiological measurements, lifestyle factors, and medical history attributes.
+This project demonstrates an end-to-end machine learning workflow for a health risk classification problem, focusing on clean preprocessing, reproducible pipelines, and fair model comparison.
+The goal is to build a predictive system that classifies individuals as “healthy” or “unhealthy” using clinical and lifestyle data while following industry-aligned best practices.
 
-This classification aids in:
+🎯 **Objective**
 
-Selecting eligible participants for clinical trials and longitudinal studies
+Train and compare multiple classification models
 
-Stratifying populations for risk-based analysis and outcome comparison
+Apply proper preprocessing and scaling
 
-The study includes:
-
-Baseline models
-
-Tree-based models
-
-Ensemble learning
-
-Distance-based learning
-
-Margin-based learning
-
-Probabilistic learning
-
-🎯 **Objectives**
-
-Implement multiple classification algorithms
-
-Evaluate models using proper metrics
-
-Detect and handle overfitting
+Detect and control overfitting
 
 Perform hyperparameter tuning
 
-Compare models and select the best performer
+Select the best-performing model based on test data performance
 
-🤖 **Algorithms Used**
-| Algorithm                    | Purpose                  |
-| ---------------------------- | ------------------------ |
-| Logistic Regression          | Linear baseline model    |
-| Decision Tree                | Tree-based classifier    |
-| Pruned Decision Tree         | Overfitting control      |
-| Random Forest                | Ensemble learning        |
-| Support Vector Machine (SVM) | Margin-based classifier  |
-| K-Nearest Neighbors (KNN)    | Distance-based model     |
-| Naive Bayes                  | Probabilistic classifier |
+🛠️ **Tech Stack**
 
-⚙️ **Preprocessing Steps**
+Language: Python
 
-Data cleaning
+Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
+
+Techniques: Pipelines, Feature Scaling, Model Evaluation, Hyperparameter Tuning
+
+🔍 **Workflow**
+
+Data Understanding & EDA
+
+Explored data structure, feature types, and statistical summaries
+
+Preprocessing
 
 Train-test split
 
-Feature scaling (StandardScaler)
+Feature scaling using StandardScaler
 
-Pipeline implementation (for SVM)
+Pipeline implementation (especially for SVM) to prevent data leakage
 
-Hyperparameter tuning (K for KNN, tree pruning, SVM parameters)
+Modeling
 
-📊 **Evaluation Metrics**
+Logistic Regression
 
-The following metrics were used for fair model comparison:
+Decision Tree (with pruning)
 
-Accuracy
+Random Forest
 
-Precision
+K-Nearest Neighbors (KNN)
 
-Recall
+Support Vector Machine (SVM)
 
-F1-Score
+Naive Bayes
 
-Classification Report
+Evaluation
 
-These metrics ensure evaluation beyond accuracy, especially for class balance.
+Accuracy, Precision, Recall, F1-score
 
-🚨 **Overfitting Analysis**
+Classification Report on unseen test data
 
-The initial Decision Tree achieved 100% training accuracy, indicating overfitting.
+Model comparison to ensure fair selection
 
-Pruning techniques (max_depth, min_samples_leaf) reduced variance and improved generalization.
+📈 **Results**
 
-Random Forest further reduced overfitting using ensemble learning.
+The initial Decision Tree showed signs of overfitting, which was reduced using pruning techniques.
 
-🔧 **Model Tuning Highlights**
-| Model         | Improvement Technique                   |
-| ------------- | --------------------------------------- |
-| Decision Tree | Pruning                                 |
-| Random Forest | Ensemble averaging                      |
-| KNN           | Optimal K selection (best at K=9)       |
-| SVM           | Feature scaling + RBF kernel + pipeline |
+Random Forest improved stability through ensemble learning.
 
-🏆 **Model Performance Comparison**
+KNN performance improved after selecting the optimal K value.
+
+Feature scaling significantly improved SVM performance.
+
+**Model Performance (Approx.)**
 | Model                | Accuracy        |
 | -------------------- | --------------- |
 | Logistic Regression  | ~82%            |
 | Naive Bayes          | ~82%            |
 | Pruned Decision Tree | ~83%            |
 | Random Forest        | ~85%            |
-| KNN (K=9)            | ~88%            |
+| KNN (Tuned)          | ~88%            |
 | **SVM (Tuned)**      | **~93% (Best)** |
 
-🧠 **Key Learnings**
 
-Accuracy alone is not enough; precision, recall, and F1-score are crucial
+Final Choice: Support Vector Machine (SVM)
+Reason: After scaling and hyperparameter tuning (RBF kernel), SVM achieved the highest accuracy with balanced precision and recall, showing strong generalization and effective boundary separation.
 
-Decision Trees easily overfit without pruning
+✅ **Key Learnings**
 
-Ensemble models improve stability
+Pipelines are essential for clean and reproducible ML workflows
 
-Scaling is essential for distance-based and margin-based models
+Feature scaling greatly impacts distance-based and margin-based models
 
-Hyperparameter tuning can drastically change model performance
+Decision Trees can overfit without pruning
 
-Model selection depends on data characteristics
+Ensemble models improve model stability
 
-🥇 **Final Conclusion**
+Model selection should rely on multiple metrics, not accuracy alone
 
-After testing multiple models and applying tuning techniques, the SVM classifier with feature scaling and RBF kernel achieved the best performance (~93% accuracy) with balanced precision and recall. This indicates strong generalization and effective learning of the decision boundary.
+Hyperparameter tuning can drastically improve performance
 
-🛠️ **Technologies Used**
+🚀 **Future Improvements**
 
-Python
+Cross-validation for more robust evaluation
 
-Scikit-learn
+Advanced hyperparameter optimization (GridSearchCV / RandomizedSearchCV)
 
-Pandas
+Feature importance and interpretability analysis
 
-NumPy
+Model deployment (Streamlit / Flask)
+
+👩‍💻 **Author**
+
+Savita Pal
+Aspiring Data Scientist | Python | Machine Learning | Data Analysis
