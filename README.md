@@ -27,39 +27,39 @@ Techniques: Pipelines, Feature Scaling, Model Evaluation, Hyperparameter Tuning
 
 🔍 **Workflow**
 
-Data Understanding & EDA
+1. Data Understanding & EDA
 
-Explored data structure, feature types, and statistical summaries
+- Explored data structure, feature types, and statistical summaries
 
-Preprocessing
+2. Preprocessing
 
-Train-test split
+- Train-test split
 
-Feature scaling using StandardScaler
+- Feature scaling using StandardScaler
 
-Pipeline implementation (especially for SVM) to prevent data leakage
+- Pipeline implementation (especially for SVM) to prevent data leakage
 
-Modeling
+3. Modeling
 
-Logistic Regression
+- Logistic Regression
 
-Decision Tree (with pruning)
+- Decision Tree (with pruning)
 
-Random Forest
+- Random Forest
 
-K-Nearest Neighbors (KNN)
+- K-Nearest Neighbors (KNN)
 
-Support Vector Machine (SVM)
+- Support Vector Machine (SVM)
 
-Naive Bayes
+- Naive Bayes
 
-Evaluation
+4. Evaluation
 
-Accuracy, Precision, Recall, F1-score
+- Accuracy, Precision, Recall, F1-score
 
-Classification Report on unseen test data
+- Classification Report on unseen test data
 
-Model comparison to ensure fair selection
+- Model comparison to ensure fair selection
 
 📈 **Results**
 
@@ -82,8 +82,8 @@ Feature scaling significantly improved SVM performance.
 | **SVM (Tuned)**      | **~93% (Best)** |
 
 
-Final Choice: Support Vector Machine (SVM)
-Reason: After scaling and hyperparameter tuning (RBF kernel), SVM achieved the highest accuracy with balanced precision and recall, showing strong generalization and effective boundary separation.
+**Final Choice:** Support Vector Machine (SVM)
+**Reason:** After scaling and hyperparameter tuning (RBF kernel), SVM achieved the highest accuracy with balanced precision and recall, showing strong generalization and effective boundary separation.
 
 ✅ **Key Learnings**
 
